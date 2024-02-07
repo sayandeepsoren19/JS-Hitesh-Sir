@@ -36,6 +36,7 @@ let u1;//undefined
 let nu = null;//null
 // We DELIBERATELY ASSIGN value-'null' to indicate empty value.
 // --------------------------------------------------------------------------------------------------------------------------
+//@@@@@@ - means OUTPUT ON SCREEN
 console.table([n1,n2,nn,s1,s2,s3,s4,b1,b2,u1,nu]);//@@@@@@@@@
 console.table([typeof n1,typeof n2,typeof nn,typeof s1,
     typeof s2,typeof s3,typeof s4,typeof b1,typeof b2,typeof u1,typeof nu]);//@@@@@@
