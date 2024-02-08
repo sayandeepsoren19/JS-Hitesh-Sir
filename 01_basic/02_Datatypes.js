@@ -1,5 +1,7 @@
 "use strict"; // This statement tells that below 'JS Codes' are in 'current-version'
+
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
 //alert(3+3);
 //Above statement works in browser 
 //But doesn't work in Node Js
