@@ -6,17 +6,18 @@
 //Above statement works in browser 
 //But doesn't work in Node Js
 //&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
-//           DATA TYPES IN JS
-//           ----------------
-//                2.BigInt
-//                1.Number
-//                3.string
-//                4.Boolean
-//                5.Undefined
-//                6.Null
-//                7.Object
-//                8.Function
-//                9.Symbol
+//                DATA TYPES IN JS
+//                ----------------
+//      Primitive                   Reference (Non-Primitive)
+//     -----------                 ---------------------------
+//      1.Number                         1.Array
+//      2.BigInt                         2.Object
+//      3.string                         3.Function
+//      4.Boolean
+//      5.Undefined
+//      6.Null
+//      7.Symbol
+
 // -----------------------------------------
 let n1 = 45; //Number
 let n2 = 45.654;//Number
@@ -31,11 +32,11 @@ let s4 = "Sayandeep";//string
 let b1 = true;//boolean
 let b2 = false;//boolean
 // -----------------------------------------
-let u1;//undefined
+let u1;//undefined (undefined)
 // At the time of declaration, variable is automatically assigned value-'undefined'.
 //let u2 = undefined; //WE DO NOT DELIBERATELY ASSIGN value-'undefined' in variable. Although We Can.
 // -----------------------------------------
-let nu = null;//null
+let nu = null;//null (object)
 // We DELIBERATELY ASSIGN value-'null' to indicate empty value.
 // --------------------------------------------------------------------------------------------------------------------------
 //@@@@@@ - means OUTPUT ON SCREEN
@@ -44,20 +45,17 @@ console.table([typeof n1,typeof n2,typeof nn,typeof s1,
     typeof s2,typeof s3,typeof s4,typeof b1,typeof b2,typeof u1,typeof nu]);//@@@@@@
 
 // ----------------------------------------------------------------------------------------------------------------------------
-//Array
-const myArr =[5,6,7];   //object
+const myArr =[5,6,7]; //Array (object)
 console.table([typeof myArr,myArr]);//@@@@@@
 // ----------------------------------------
-//Object
-const myObj = {         //object
+const myObj = {      //object (object)
     property1: 5,
     property2: 6,
     property3: 7
 }
 console.table([typeof myObj,myObj]);//@@@@@@
 // ----------------------------------------
-//Function
-function myFun(){      //function
+function myFun(){     //Function (function)
     let result = 5;
     return result;
 }
