@@ -7,7 +7,7 @@ let y = x; //Pass ba Value
 console.log(x);
 console.log(y);
 
-y = 50;
+y = 50; //Only y's value changed
 console.log(x);
 console.log(y);
 
@@ -22,6 +22,6 @@ let b = a; //Pass by Reference
 console.log(a.property1);
 console.log(b.property1);
 
-b.property1 = 50;
+b.property1 = 50; //Both object's property's value is changed
 console.log(a.property1);
 console.log(b.property1);
