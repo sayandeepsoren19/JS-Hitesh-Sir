@@ -1,48 +1,125 @@
-const myDate = new Date();
+//$$$$$$$$$$$  Current Date  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-console.log(typeof myDate);
-console.log(myDate); //Hard-to-understand
+let myTime = new Date();
+console.log(typeof myTime);
+console.log(myTime);
+console.log(myTime.toString());
+console.log("--------------------------------------------------------");
+console.log("--------------------------------------------------------");
 
-console.log(myDate.toString());//(day+date) + (time+time_zone)
-console.log(myDate.toLocaleString()); //date + time
-console.log(myDate.toDateString()); //(day+date)
-console.log(myDate.toLocaleDateString()); //date
+//$$$$$$$$$$  Specific Date  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-console.log(myDate.toISOString()); //Hard-to-understand
-console.log(myDate.toJSON());      //Hard-to-understand
-console.log("-------------------------------------");
+//>>>>>>>>>>  Using String  <<<<<<<<<    
+//Month--> Jan = 1 || Dec = 12
 
-const myCreatedDate = new Date(2019,0,25);
-console.log(myCreatedDate.toString());
+//                    ("YYYY-(MM-DD)")
+let myTime2 = new Date("2022-01-20"); //set time at- (05:30:00)
+console.log(myTime2.toString());
+console.log("-----------");
 
-const myCreatedDate2 = new Date(2019,0,26,22,35);
-console.log(myCreatedDate2.toString());
+//                ("(MM-DD)-YYYY")
+myTime2 = new Date("01-20-2022");
+console.log(myTime2.toString());
 
-const myCreatedDate3 = new Date("2019-01-27"); //YYYY-(MM-DD)
-console.log(myCreatedDate3.toString());              //first month
-                                                     //then day
-let myCreatedDate4 = new Date("01-28-2019"); //(MM-DD)-YYYY
-console.log(myCreatedDate4.toString());
+//                ("Month DD,YYYY 00:00:00")
+myTime2 = new Date("January 20,2022 21:30:45");
+console.log(myTime2.toString());
+console.log("--------------------------------------------------------");
 
-myCreatedDate4 = new Date("01-29-2019"); //Reassignment of new date in 'let' variable --> 'myCreatedDate4'
-console.log(myCreatedDate4.toString());
-console.log("--------------------------------------");
+//>>>>>>>>>  Without String  <<<<<<<<
+//Month--> Jan = 0 || Dec = 11
 
-let myTimeStamp = Date.now(); //returns mili-seconds from 1/Jan/1970 to till now
+myTime2 = new Date(1000);  //milli-seconds
+console.log(myTime2.toString());
+// new Date(milli-seconds) --> Counts From 1_Jan,1970>>>05:30:00
 
-let a = new Date("2024-02-11");
-let b = new Date("2024-02-10");
+myTime2 = new Date(0);
+console.log(myTime2.toString());
 
-console.log(myTimeStamp); //this is the most
-console.log(a.getTime()); //this is little less than the above
-console.log(b.getTime()); ////this is ALSO little less than the above
+myTime2 = new Date(-1000);
+console.log(myTime2.toString());
+console.log("-----------");
 
-console.log(Math.floor( Date.now()/1000 ));
-console.log("--------------------------------------");
+myTime2 = new Date(2022,0); //year, month
+console.log(myTime2.toString());
 
-let newDate = new Date();
-console.log(newDate.getDate());
-console.log(newDate.getDay()); // SUNDAY = 0, SATURDAY = 6
-console.log(newDate.getMonth()+1); //JAN = 0, DEC = 11
-console.log(newDate.getFullYear());
+myTime2 = new Date(2022,0,31); //year, month, Day
+console.log(myTime2.toString());
 
+myTime2 = new Date(2022,0,31,21); //year, month, Day, Hour
+console.log(myTime2.toString());
+
+myTime2 = new Date(2022,0,31,21,30); //year, month, Day, Hour, Minutes
+console.log(myTime2.toString());
+
+myTime2 = new Date(2022,0,31,21,30,45); //year, month, Day, Hour, Minutes, Seconds
+console.log(myTime2.toString());
+
+myTime2 = new Date(2022,0,31,21,30,45,1000); //year, month, Day, Hour, Minutes, Seconds, Milli-seconds
+console.log(myTime2.toString());
+console.log("--------------------------------------------------------");
+console.log("--------------------------------------------------------");
+
+//$$$$$$$$$$$  Date Methods  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//When a date object is created, a number of methods allow you to operate on it.
+
+myTime = new Date();
+console.log(myTime); //Hard to Understand
+console.log(" ");
+console.log(myTime.toString());      
+console.log(myTime.toDateString());
+console.log(" ");
+console.log(myTime.toLocaleString());
+console.log(myTime.toLocaleDateString());
+console.log(" ");
+console.log(myTime.toUTCString());
+console.log(myTime.toISOString());
+console.log("--------------------------------------------------------");
+console.log("--------------------------------------------------------");
+
+//$$$$$$$$$$$  Get Date Methods  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+console.log(myTime.getFullYear());
+console.log(myTime.getMonth()); //Jan = 0 || Dec = 11
+console.log(myTime.getDate());
+console.log(myTime.getDay());
+console.log(" ");
+console.log(myTime.getHours());
+console.log(myTime.getMinutes());
+console.log(myTime.getSeconds());
+console.log(myTime.getMilliseconds());
+console.log(" ");
+console.log(myTime.getTime());//get time in milli-seconds from 1_Jan,1970
+console.log("--------------------------------------------------------");
+console.log("--------------------------------------------------------");
+
+//$$$$$$$$$$$  Set Date Methods  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+//setMethod() --> Changes the actual Object.
+
+myTime = new Date();
+myTime.setFullYear(2020);
+console.log(myTime.toString());
+
+myTime = new Date();
+myTime.setMonth(0);
+console.log(myTime.toString());
+
+myTime = new Date();
+myTime.setDate(14);
+console.log(myTime.toString());
+
+myTime = new Date();
+myTime.setHours(21);
+console.log(myTime.toString());
+
+myTime = new Date();
+myTime.setMinutes(30);
+console.log(myTime.toString());
+
+myTime = new Date();
+myTime.setSeconds(45);
+console.log(myTime.toString());
+
+myTime = new Date();
+myTime.setMilliseconds(999);
+console.log(myTime.toString());
