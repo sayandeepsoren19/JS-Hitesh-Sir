@@ -16,6 +16,7 @@ console.log("----------------222---------------");
 
 //Output Whole Object
 
+console.log(typeof myObj);
 console.log(myObj);
 console.log("----------------");
 
@@ -73,7 +74,7 @@ console.log("----------------555---------------");
 
 const myObj_5 = {
     greeting(){
-        console.log("Hello sare...have a great day.");
+        console.log("Hello sarene...have a great day.");
     }
 }
 
