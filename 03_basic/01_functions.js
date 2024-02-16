@@ -70,3 +70,57 @@ function printNum(num = 10){
 }
 console.log("Number is = ",printNum(5));
 console.log("Number is = ",printNum()); //No Argument.
+console.log("---------------444----------------");
+
+//          rest operator / spread operator
+
+// function calculateCartPrice(num1){
+    //     return num1;
+    // }
+    
+    // function calculateCartPrice(...num1){ // ... => rest operator
+    //     return num1;
+    // }
+    
+    function calculateCartPrice(num1, num2, ...nums){ // ... => rest operator
+        return nums;
+    }
+    
+    console.log(calculateCartPrice(200));
+    //200 will receiced by num1
+    //400 will receiced by num2
+    //And 600, 800 will be received by nums into an ARRAY
+    console.log(calculateCartPrice(200, 400, 600, 800));
+    console.log("---------------555----------------");
+    
+    //          Object as an Argument in function
+
+    const user = {
+        userName: "Sayandeep",
+        age: 30
+    }
+    
+    function handleObject(object_parameter){
+        console.log(`Name is = ${object_parameter.userName} and age is = ${object_parameter.age}`);
+    } //But If object_parameter.keyName and ketName in Object does NOT match ---> undefined
+    
+    handleObject(user);
+    console.log("--------------");
+    
+    //Passing an object direct as an argument
+    handleObject({userName: "Hitesh", age: 39});
+    console.log("---------------666----------------");
+
+    //          Array as an Argument in function
+
+    function returnSecondValue(getArray){
+        return getArray[1];
+    }
+    
+    const arr = [5,10,15,20,25];
+
+    console.log(returnSecondValue(arr));
+    console.log("--------------");
+    console.log(returnSecondValue([3,33,333,3333,33333]));
+
+
