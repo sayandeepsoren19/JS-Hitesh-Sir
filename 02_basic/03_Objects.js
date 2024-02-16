@@ -15,10 +15,10 @@ console.log("----------------111---------------");
 const myObj = {
   //'Property_name' :  Property_value
   name: "Sayandeep Soren", //Property_names are automatically stored as --> 'String'
-  age: 24, //Property_names --> name,
-  location: "India", //            age,
+  age: 24,                          //Property_names --> name,
+  location: "India",                       //            age,
   phoneNo: [7, 0, 7, 6, 4, 5, 6, 7, 8, 9], //            location,
-}; //            phoneNo
+};                                         //            phoneNo
 console.log("----------------222---------------");
 
 //Output Whole Object
