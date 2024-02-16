@@ -33,17 +33,16 @@ console.log("--------------------------111-------------------------");
 
 //Using Object Literals
 const nestedObj = {
-    a: 1,
-    b: 2,
-    c: {
-        d: 3,
-        e: {
-            f: 4,
-            g: 5
-        }
-    }
-}
-
+  a: 1,
+  b: 2,
+  c: {
+    d: 3,
+    e: {
+      f: 4,
+      g: 5,
+    },
+  },
+};
 
 console.log(nestedObj.a);
 console.log(nestedObj.b);
@@ -56,22 +55,22 @@ console.log("--------------------------222-------------------------");
 
 //          Merge Objects
 
-const obj1 = { 1: 'a', 2: 'b'};
-const obj2 = { 3: 'c', 4: 'd'};
+const obj1 = { 1: "a", 2: "b" };
+const obj2 = { 3: "c", 4: "d" };
 
 // const obj3 = {obj1, obj2};                    ----> Two Objects inside Object
 // const obj3 = Object.assign({}, obj1, obj2);   ----> This is one way
-const obj3 = {...obj1, ...obj2};               //----> this is Best Way
+const obj3 = { ...obj1, ...obj2 }; //----> this is Best Way
 console.log(obj3);
 console.log("---------------------------333------------------------");
 
 //          Array of Objects
 
 const arr = [
-    {a: 1, b: 2},
-    {c: 3, d: 4},
-    {e: 5, f: 6}
-]
+  { a: 1, b: 2 },
+  { c: 3, d: 4 },
+  { e: 5, f: 6 },
+];
 console.log(arr);
 console.log(arr[0]);
 console.log(arr[0].a);
@@ -80,10 +79,10 @@ console.log("---------------------------444------------------------");
 //          Object.keys(obj)   --> Merge all the     KEYS of an OBJECT into ARRAY
 //          Object.values(obj) --> Merge all the   VALUES of an OBJECT into ARRAY
 
-const OBJ = {a:1, b:2, c:3};
+const OBJ = { a: 1, b: 2, c: 3 };
 
 console.log(OBJ);
-console.log(Object.keys(OBJ));     //KEYS of an OBJECT into ARRAY
+console.log(Object.keys(OBJ)); //KEYS of an OBJECT into ARRAY
 console.log(Object.values(OBJ)); //VALUES of an OBJECT into ARRAY
 console.log("---------------------------555------------------------");
 
@@ -93,7 +92,56 @@ console.log(Object.entries(OBJ));
 
 //     Object_Name.hasOwnProperty()
 
-console.log(OBJ.hasOwnProperty('a'));
-console.log(OBJ.hasOwnProperty('b'));
-console.log(OBJ.hasOwnProperty('c'));
-console.log(OBJ.hasOwnProperty('d'));
+console.log(OBJ.hasOwnProperty("a"));
+console.log(OBJ.hasOwnProperty("b"));
+console.log(OBJ.hasOwnProperty("c"));
+console.log(OBJ.hasOwnProperty("d"));
+console.log("---------------------------666------------------------");
+
+//          Print Object Properties
+
+const course = {
+  name: "JS in Hindi",
+  price: 999,
+  instructor: "Hitesh Sir",
+};
+
+//One Way
+console.log(course.instructor);
+
+//Second Way
+const { instructor } = course;
+//Now , No need to write 'course.instructor' everytime
+//We can write just 'instructor'
+console.log(instructor); //SHORT_CUT
+
+//Third Way
+const { instructor: ins } = course;
+//Now MORE short-cut => 'ins'
+console.log(ins);
+
+console.log("---------------------------777------------------------");
+
+//          React Part --> for future
+//             Object Destructure
+
+// // const navbar = (props.company) => {
+//     const navbar = ({company}) => {
+
+//     }
+//     navbar(company = "hitesh");
+console.log("---------------------------888------------------------");
+
+//              JSON
+
+// {
+//     "name": "Hitesh",
+//     "course": "JS in Hindi",
+//     "price": "Free"
+// }
+
+//   [
+//       {},
+//       {},
+//       {}
+//   ]

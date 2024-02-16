@@ -86,4 +86,4 @@ const myObj_5 = {
 };
 
 console.log(myObj_5.greeting);
-console.log(myObj_5.greeting());
+console.log(myObj_5.greeting()); //block execution + (in next line --> undefined --> why???)
