@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="list">
+      <li>Javascrippt</li>
+      <li>TypeScript</li>
+    </ul>
+    <script>
+        function myFun(text){
+            const node = document.createElement('li');
+            node.innerText = text;
+            document.getElementById('list').appendChild(node);
+        }
+        myFun("Java");
+        myFun("Python");
+    </script>
+  </body>
+</html>
