@@ -1,8 +1,8 @@
 //$$$$$$$$$$$  Current Date  $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 let myTime = new Date();
-console.log(typeof myTime);
 console.log(myTime);
+console.log(typeof myTime);
 console.log(myTime.toString());
 console.log("--------------------------------------------------------");
 console.log("--------------------------------------------------------");
