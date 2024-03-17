@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Javascript</title>
+  </head>
+  <body>
+    <h1>Sayandeep Soren</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <script>
+      console.log("setInverval Sikhenge Aaj");
+
+      const startBtn = document.querySelector("#start");
+      const startKrDo = setInterval(printName, 2000, "Neil Armstrong");
+      startBtn.addEventListener("click", startKrDo);
+      function printName(str) {
+        console.log(str, parseInt(Math.random() * 10 + 1));
+      }
+
+      const stopBtn = document.querySelector("#stop");
+      stopBtn.addEventListener("click", stopKrDo);
+      function stopKrDo() {
+        clearInterval(startKrDo);
+      }
+    </script>
+  </body>
+</html>

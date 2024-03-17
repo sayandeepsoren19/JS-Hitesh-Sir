@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Javascript</title>
+</head>
+<body>
+    <h1>Async Javascript</h1>
+    <button id="stop">stop</button>
+    <script>
+        // const printMyName = function(){
+        //     console.log('Sayandeep Soren');
+        // }
+        // setTimeout(printMyName, 2000);
+
+        const changeText = function(){
+            document.querySelector('h1').innerHTML = `Change ho gaya ...`;
+        }
+        const clearTIMEOUT = function(){
+            clearTimeout(setTIMEOUT);
+        }
+        const setTIMEOUT = setTimeout(changeText, 3000);
+        const btn = document.querySelector('#stop');
+        btn.addEventListener('click', clearTIMEOUT);
+
+    </script>
+</body>
+</html>

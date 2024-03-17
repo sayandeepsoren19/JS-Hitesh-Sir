@@ -77,7 +77,7 @@ setInterval(function () {
 
 ```
 
-##project 4: Number Guessing Game
+## project 4: Number Guessing Game
 
 ```javascript
 
@@ -248,5 +248,74 @@ function playNewGame() {
   console.log('winningNum: ', winningNum);
   guidingMessage.innerText = '';
 }
+
+```
+
+## project 5: Keyboard 
+
+```javascript
+
+console.log('hi');
+
+const table = document.querySelector('table');
+const key = document.querySelector('#key');
+const keycode = document.querySelector('#keycode');
+const code = document.querySelector('#code');
+
+addEventListener('keypress', (e) => {
+  keyPressed(e);
+});
+
+function keyPressed(e) {
+  // console.log(e);
+  table.style.display = 'initial';
+  if (e.key === ' ') {
+    key.innerHTML = `space`;
+  } else {
+    key.innerHTML = `${e.key}`;
+  }
+  keycode.innerHTML = `${e.code}`;
+  code.innerHTML = `${e.charCode}`;
+}
+
+
+```
+
+## project 6: Unlimited Colors
+
+```javascript
+
+const startBtn = document.querySelector('#start');
+
+//start color-changing
+startBtn.addEventListener('click', changingColor);
+
+let reference = null;
+function changingColor() {
+  console.log('Suru hua');
+  if (reference === null) {
+    //safty check --> better code practice
+    reference = setInterval(changingBGcolor, 1000);
+  }
+
+  function changingBGcolor() {
+    const color = '#' + random() + random() + random();
+    document.body.style.backgroundColor = color;
+  }
+}
+
+function random() {
+  /* generate numbers from 0 to 255 */
+  const num = Math.floor(Math.random() * 256);
+  return num.toString(16);
+}
+// ----------------------------------------
+//stop color-changing
+const stopBtn = document.querySelector('#stop');
+stopBtn.addEventListener('click', () => {
+  console.log('Ruk gaya');
+  clearInterval(reference);
+  reference = null; //resetting the variable
+});
 
 ```
