@@ -251,7 +251,7 @@ function playNewGame() {
 
 ```
 
-## project 5: Keyboard 
+## project 5: Keyboard Checker
 
 ```javascript
 
