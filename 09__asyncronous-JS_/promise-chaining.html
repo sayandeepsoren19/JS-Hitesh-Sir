@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise Chaining</title>
+  </head>
+  <body>
+    <h1>Promise Chaining</h1>
+    <script>
+      // ------------------------------------------------
+      function API(name){
+        return new Promise( (fulfilled, rejected)=>{
+          setTimeout(()=>{ //this is like --> real api
+            if(name === 'Sayandeep Soren'){
+              fulfilled('Naam sehi ha');
+            }else{
+              rejected('Naam galat ha');
+            }
+          },6000);
+        } );
+      }
+
+      let wada = API('Sayandeep Soren');
+
+      wada.then( (data)=>{
+        console.log(data);
+        console.log('wada --> fulfilled');
+      } );
+      wada.catch( (data)=>{
+        console.log(data);
+        console.log('wada --> rejected');
+      } );
+      // ---------------------------------------------------------
+      //                    Promise Chaining
+      //                   -------------------
+
+      // function getData(requestId) {
+      //   return new Promise((fulfilled, rejected) => {
+      //     setTimeout(() => {
+      //       console.log(
+      //         `requestID: ${requestId} and Result: ${requestId * 10}`
+      //       );
+      //       fulfilled(`requestId: ${requestId} fullfilled ho gaya`);
+      //     }, 3000);
+      //   });
+      // }
+
+      //      One-way of promise-chaining
+
+      // console.log('requesting requestId 1.........');
+      // getData(1).then( (x)=>{
+      //   console.log(x);
+      //   console.log('requesting requestId 2.........');
+      //   getData(2).then( (y)=>{
+      //     console.log(y);
+      //     console.log('requesting requestId 3.........');
+      //     getData(3).then( (z)=>{
+      //       console.log(z);
+      //     } )
+      //   } )
+      // } )
+
+      //      Second-way of promise-chaining
+
+      // console.log("requesting requestId 1.........");
+      // getData(1)
+      //   .then((x) => {
+      //     console.log(x);
+      //   console.log("requesting requestId 2.........");
+      //   return getData(2);
+      // })
+      // .then((y) => {
+      //   console.log(y);
+      //   console.log("requesting requestId 3.........");
+      //   return getData(3);
+      // })
+      // .then((z) => {
+      //   console.log(z);
+      // });
+      // -------------------------------------------------
+    </script>
+  </body>
+</html>

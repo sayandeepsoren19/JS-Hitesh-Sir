@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>call-back chaining</h1>
+    <script>
+      //   function getData(requestId){
+      //     setTimeout( ()=>{
+      //         console.log("Result of requestId: ", requestId);
+      //     } ,2000);
+      //   }
+      //   getData(1);
+      //   getData(2);
+      //   getData(3);
+
+      //------> in abouve code, we are not able to control the sequence of execution of functions
+      // ----------------------------------------------------------------------------------------
+
+      //------>below, we want to first execute 1 function
+      //                     only after that 2nd function
+      //                     only after that 3nd function
+
+      // //Call-back Hell
+      // //Nested Call-backs
+      // // - - - - - - - - > Code Readability is very Bad
+
+      // //api take time to response
+      // //SAME, in 'API' function, we have used 'setTimeout' function
+      // // to make 'API' function like real api that takes time
+
+      function API(requestId, getNextRequest) {
+        setTimeout(() => {
+          console.log("Result of requestId: ", requestId);
+          if (getNextRequest) {
+            getNextRequest();
+          }
+        }, 2000); //api take 2 second to response
+      }
+
+      API(1, () => {
+        API(2, () => {
+          API(3, () => {
+            API(4);
+          });
+        });
+      });
+
+      // ----------------------------------------
+    </script>
+  </body>
+</html>
